@@ -1,10 +1,8 @@
-<div class="wapper">
-  <canvas id="canvas" width="600" height="600"></canvas>
-</div>
+<canvas id="canvas" width="600" height="600"></canvas>
+
 <div class="control">
   <button md-raised-button (click)="undo()">戻る</button>
   <button md-raised-button (click)="redo()">進む</button>
-  <button md-raised-button (click)="changePencil()" *ngIf="drawingMode" [mdMenuTriggerFor]="menu">ペンの変更</button>
   <md-menu #menu="mdMenu">
       <button md-menu-item>
         <md-icon>dialpad</md-icon>
@@ -20,13 +18,7 @@
       </button>
     </md-menu>
   <button md-raised-button (click)="deleteObject()" *ngIf="!drawingMode">削除</button>
+  <a md-raised-button (click)="saveImage()" [href]="resultImage" download="">保存</a>
   <md-checkbox class="example-margin" [(ngModel)]="drawingMode">手書きモード</md-checkbox>
-</div>
-<div class="control">
-  <label for="file-input">
-      <button md-raised-button (click)="fileInput.click()">画像を選択</button>
-    </label>
-    <input id="file-input" #fileInput type="file" accept="image/*" (change)="handleInputChange($event)" multiple/>
-  <a md-raised-button (click)="saveImage()" [href]="resultImage" download="">jpegを保存</a>
 </div>
 

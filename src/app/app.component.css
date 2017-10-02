@@ -1,0 +1,11 @@
+#canvas {
+  background-color: #f2f2f2;
+}
+
+#file-input {
+  display:none;
+}
+
+.control {
+  margin: 10px auto;
+}
