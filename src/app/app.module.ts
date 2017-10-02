@@ -14,6 +14,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MdButtonModule,
     MdCheckboxModule,
     MatSlideToggleModule,
