@@ -75,6 +75,7 @@ export class AppComponent implements OnInit {
 
   // 選択中のオブジェクトを削除
   deleteObject() {
-    this.canvas.getActiveObject().remove();
-   }
+    const object = this.canvas.getActiveObject();
+    this.canvas.remove(object);
+  }
 }
